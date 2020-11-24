@@ -98,4 +98,17 @@ public class Drug {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Drug{" +
+                "drugid=" + drugid +
+                ", name='" + name + '\'' +
+                ", pinyin='" + pinyin + '\'' +
+                ", unit='" + unit + '\'' +
+                ", specification='" + specification + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
