@@ -1,6 +1,7 @@
 package com.yi.service;
 
 import com.yi.mapper.PatientMapper;
+import com.yi.pojo.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,5 +44,10 @@ public class PatientServiceImpl implements PatientService {
 
         );
 
+    }
+
+    @Override
+    public Patient findPatientById(Integer patientid) {
+        return patientMapper.findPatientById(patientid);
     }
 }

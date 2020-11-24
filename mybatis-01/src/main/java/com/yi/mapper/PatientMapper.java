@@ -1,5 +1,6 @@
 package com.yi.mapper;
 
+import com.yi.pojo.Patient;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -22,4 +23,7 @@ public interface PatientMapper {
                            double creditlimit
 
                           );
+
+
+  public Patient findPatientById(Integer patientid);
 }

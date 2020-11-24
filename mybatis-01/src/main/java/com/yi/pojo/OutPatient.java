@@ -7,7 +7,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Registration {
+public class OutPatient {
 
     private Integer outpatientid;
     private Integer patientid;

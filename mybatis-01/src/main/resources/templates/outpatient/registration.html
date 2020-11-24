@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>预约挂号</h1>
+<form th:action="@{/outpatient/Registration}">
+    <p>输入病历号进行检索：<input type="text" name="caseid"></p>
+    <input type="submit">
+</form>
+
+<h2>病人资料</h2>
+门诊编号:<p th:text="${outpatientid}"></p>
+姓名：<p th:text="${patientname}"></p>
+年龄：<p th:text="${patientage}"></p>
+性别：<p th:text="${patientsex}"></p>
+家庭住址：<p th:text="${patientaddress}"></p>
+联系电话：<p th:text="${patientphone}"></p>
+紧急联系人：<p th:text="${patientfirstman}"></p>
+关系：<p th:text="${patientfirstquery}"></p>
+紧急联系人电话<p th:text="${patientfirstphone}"></p>
+
+
+
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.yi.service;
 
+import com.yi.pojo.Patient;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -18,4 +19,6 @@ public interface PatientService {
                                 double balance,
                                 double creditlimit
                             );
+
+    public Patient findPatientById(Integer patientid);
 }
