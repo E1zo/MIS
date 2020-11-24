@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.mapper.PatientMapper">
+
+    <insert id="insertPatient" parameterType="com.yi.pojo.Patient" >
+      INSERT  INTO mis.patient (name,sex,age,sidno,sidtype,address,phone,companynameaddress,companyphone,email,firstman,firstquery,firstphone,firstaddress,recorddate,hispass,hisoperate,cardtype,balance,creditlimit)
+      values (#{name},#{sex},#{age},#{sidno},#{sidtype},#{address},#{phone},#{companynameaddress},#{companyphone},#{email},#{firstman},#{firstquery},#{firstphone},#{firstaddress},#{recorddate},#{hispass},#{hisoperate},#{cardtype},#{balance},#{creditlimit});
+    </insert>
+
+    <select id="findPatientById" parameterType="Integer" resultType="Patient">
+       SELECT * FROM patient where patientid = #{patientid}
+    </select>
+
+</mapper>
