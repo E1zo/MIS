@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>病人登记</h1>
+<form th:action="@{/registration}">
+
+    <p>姓名：<input type="text" name="name"></p>
+    <p>性别：<input type="text" name="sex"></p>
+    <p>年龄：<input type="text" name="age"></p>
+    <p>证件号码：<input type="text" name="sidno"></p>
+    <p>证件类型：<input type="text" name="sidtype"></p>
+    <p>家庭住址：<input type="text" name="address"></p>
+    <p>联系电话：<input type="text" name="phone"></p>
+    <p>公司名称及地址：<input type="text" name="companynameaddress"></p>
+    <p>公司联系电话：<input type="text" name="companyphone"></p>
+    <p>Email：<input type="text" name="email"></p>
+    <p>紧急联系人：<input type="text" name="firstman"></p>
+    <p>与病人关系：<input type="text" name="firstquery"></p>
+    <p>紧急联系人电话：<input type="text" name="firstphone"></p>
+    <p>联系地址：<input type="text" name="firstaddress"></p>
+    <p>登记日期：<input type="text" name="recorddate"></p>
+    <p>过敏史：<input type="text" name="hispass"></p>
+    <p>手术史：<input type="text" name="hisoperate"></p>
+    <p>卡类型：<input type="text" name="cardtype"></p>
+    <p>余额：<input type="text" name="balance"></p>
+    <p>透支额：<input type="text" name="creditlimit"></p>
+
+
+
+
+
+
+
+
+
+
+
+    <p><input type="submit"></p>
+
+</form>
+</body>
+</html>
