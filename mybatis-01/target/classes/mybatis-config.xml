@@ -22,5 +22,6 @@
         <mapper resource="UserMapper.xml"/>
         <mapper resource="PatientMapper.xml"/>
         <mapper resource="DrugMapper.xml"/>
+        <mapper resource="DepartmentMapper.xml"/>
     </mappers>
 </configuration>

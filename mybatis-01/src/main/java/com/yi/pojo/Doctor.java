@@ -13,15 +13,11 @@ public class Doctor {
 
     private Integer doctorid;
 
-
     private String name;
-
 
     private String sex;
 
-
     private Integer departmentid;
-
 
     private String phone;
 
@@ -29,9 +25,7 @@ public class Doctor {
 
     private String description;
 
-
     private String title;
-
 
     public Integer getDoctorid() {
         return doctorid;
