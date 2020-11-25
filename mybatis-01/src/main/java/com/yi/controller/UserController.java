@@ -31,7 +31,6 @@ public class UserController {
         return "unAuthorization";
     }
 
-
     //登录验证操作
     @RequestMapping("/login")
     public String login(String username, String password, Model model){

@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -38,13 +39,14 @@ public class PatientController {
              String hisoperate,
              String cardtype,
              double balance,
-             double creditlimit
+             double creditlimit,
+             Model model
     )
 
     {
 
 
-       patientService.insertPatient(name,  sex, age,sidno, sidtype, address, phone, companynameaddress, companyphone,
+      int res= patientService.insertPatient(name,  sex, age,sidno, sidtype, address, phone, companynameaddress, companyphone,
             email,
           firstman,
           firstquery,
@@ -57,9 +59,13 @@ public class PatientController {
              balance,
            creditlimit
            );
+        if(res>0){
+            model.addAttribute("msg","登记陈坤");
+        }
+
+        return "index";
 
 
-     return "插入成功";
     }
 
 }

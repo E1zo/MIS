@@ -10,14 +10,17 @@ import org.springframework.stereotype.Service;
 public class OutPatientServiceImpl implements  OutPatientService{
     @Autowired
     OutPatientMapper outpatientMapper;
-    @Override
+
     public Integer findPatientIdByCaseId(Integer caseid){
         return outpatientMapper.findPatientIdByCaseId(caseid);
     }
 
-    @Override
     public OutPatient findOutPatientByPatientId(Integer patientid) {
         OutPatient outPatient=outpatientMapper.findOutPatientByPatientId(patientid);
         return outPatient;
+    }
+
+    public  int insertOutPatientByPatient(OutPatient outPatient){
+        return outpatientMapper.insertOutPatientByPatient(outPatient);
     }
 }

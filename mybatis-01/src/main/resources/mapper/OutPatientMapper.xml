@@ -12,4 +12,9 @@
 
     </select>
 
+    <insert id="insertOutPatientByPatient" parameterType="OutPatient">
+        INSERT INTO outpatient(outpatientid,patientid,departmentid,doctorid,time,iscancel)
+        values (#{outpatientid},#{patientid},#{departmentid},#{doctorid},#{time},#{iscancel});
+    </insert>
+
 </mapper>

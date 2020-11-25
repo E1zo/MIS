@@ -36,8 +36,13 @@ public class ShiroConfig {
         filterMap.put("/setting/*","authc");
         filterMap.put("/user/*","authc");
 
-        filterMap.put("/patient/*","perms[Doctor]");
+        filterMap.put("/doctor/*","perms[Doctor]");
+        filterMap.put("/drug/*","perms[Doctor]");
         filterMap.put("/outpatient/*","perms[Doctor]");
+        filterMap.put("/patient/*","perms[Doctor]");
+        filterMap.put("/setting/*","perms[Doctor]");
+        filterMap.put("/Admin/*","perms[Admin]");
+
 
 
 
