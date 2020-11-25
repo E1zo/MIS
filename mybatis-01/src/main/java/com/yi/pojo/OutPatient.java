@@ -15,6 +15,5 @@ public class OutPatient {
     private Integer doctorid;
     private Date time;
     private Boolean iscancel;
-
-
+    
 }
