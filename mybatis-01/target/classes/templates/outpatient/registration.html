@@ -43,9 +43,8 @@
         </tr>
         </thead>
         <tbody>
-
         <tr th:each="pat:${patient}">
-            <td th:text="${pat.name}"></td>
+            <td th:text="${pat.patientname}"></td>
             <td th:text="${pat.age}"></td>
             <td th:text="${pat.sex}"></td>
             <td th:text="${pat.address}"></td>
@@ -79,10 +78,8 @@
         <tr th:each="doc:${doctor}">
             <td th:text="${doc.name}"></td>
             <td th:text="${doc.registrationfee}"></td>
-            <td >
-
-                    <a href="/outpatient/registration?doc.doctorid">挂号</a>
-
+            <td>
+                <a th:href="@{/outpatient/registration(doctorid=${doc.doctorid})}">挂号</a>
             </td>
 
 

@@ -6,18 +6,20 @@
 </head>
 <body>
 <h1>首页</h1>
-<h2 th:text="${msg}" style="color:red;"></h2>
+<h2 th:text="${msg}" style="color:#ff0000;"></h2>
 
 <hr>
 
 <a th:href="@{/outpatient/outpatient}">门诊服务</a>
 <a th:href="@{/patient/registration}">病人登记</a>
+
 <a th:href="@{/doctor}">医生服务</a>
 <a th:href="@{/drug}">药房服务</a>
-<a th:href="@{/user/update}">基本设置</a>
-<a th:href="@{/user/update}">统计</a>
+
+<a th:href="@{/admin/toAdminPage}">基本设置</a>
 <a th:href="@{/logout}">退出</a>
-<a th:href="@{/admin/toAdminPage}">进入管理页面</a>
+
+
 
 </body>
 </html>

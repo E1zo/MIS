@@ -16,5 +16,11 @@ public class OutPatient {
     private Date time;
     private Boolean iscancel;
 
-
+    public OutPatient(Integer patientid, Integer departmentid, Integer doctorid,Date time,Boolean iscancel) {
+        this.patientid = patientid;
+        this.departmentid = departmentid;
+        this.doctorid = doctorid;
+        this.time=time;
+        this.iscancel = iscancel;
+    }
 }

@@ -21,17 +21,8 @@ public class DepartmentController {
     @RequestMapping("/allDepartment")
     public String list(Model model){
         List<Department> list = departmentService.queryAllDpt();
-<<<<<<< HEAD
-
-        for(int i=0;i<list.size();i++){
-            model.addAttribute("list", list.get(i));
-        }
-
-        return "allDepartment";
-=======
         model.addAttribute("dptList",list);
         return "admin/allDepartment";
->>>>>>> d2c24a8c159ac14cafb298e094784071b544109b
     }
 
     //跳转到 添加部门 页面

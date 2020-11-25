@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -32,45 +33,41 @@ public class OutPatientController {
     public String toOutpatient(){
         return "/outpatient/outpatient";
     }
+
     @RequestMapping("/outpatient/toregistration")
-    public String toOutpatientRegistration(){
+    public String toOutpatientRegistration(Model model){
+
         return "/outpatient/registration";
     }
 
     @RequestMapping("/outpatient/search")
     public String search(Integer caseid, Model model, HttpSession session){
         Patient patient =patientService.findPatientById(outPatientService.findPatientIdByCaseId(caseid));
+
         OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
-        session.setAttribute("patientid",patient.getPatientid());
+        session.setAttribute("patient",patient);
         model.addAttribute("outpatientid",outPatient.getOutpatientid());
-<<<<<<< HEAD
         model.addAttribute("patient",patient);
+
         //查出所有医生
         List<Doctor> doctor=doctorService.queryAllDoc();
         model.addAttribute("doctor",doctor);
-=======
-        model.addAttribute("patientname",patient.getPatientname());
-        model.addAttribute("patientage",patient.getAge());
-        model.addAttribute("patientsex",patient.getSex());
-        model.addAttribute("patientaddress",patient.getAddress());
-        model.addAttribute("patientphone",patient.getPhone());
-        model.addAttribute("patientfirstman",patient.getFirstman());
-        model.addAttribute("patientfirstquery",patient.getFirstquery());
-        model.addAttribute("patientfirstphone",patient.getFirstphone());
->>>>>>> d2c24a8c159ac14cafb298e094784071b544109b
+
         return "/outpatient/registration.html";
     }
 
     @RequestMapping("/outpatient/registration")
-    public String registration(Integer doctorid,Model model){
-
-//        int res=outPatientService.insertOutPatientBypatientId();
+    public String registration(Integer doctorid,Model model,HttpSession session){
+        Patient patient = (Patient)session.getAttribute("patient");
+        Doctor doctor=doctorService.queryDocById(doctorid);
+        System.out.println(patient.getPatientid());
         System.out.println(doctorid);
+        OutPatient outPatient = new OutPatient(patient.getPatientid(),doctor.getDepartmentid(),doctorid,new Date(),false);
 
-//        if(res>0){
-//            model.addAttribute("msg","挂号成功");
-//        }
-
+       int res=outPatientService.insertOutPatientByPatient(outPatient);
+        if(res>0){
+           model.addAttribute("msg","挂号成功");
+        }
         return "index";
     }
 

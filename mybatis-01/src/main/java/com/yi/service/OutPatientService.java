@@ -9,5 +9,5 @@ public interface OutPatientService {
 
     public Integer findPatientIdByCaseId(Integer caseid);
     public OutPatient findOutPatientByPatientId(Integer patientid);
-    public  int insertOutPatientBypatientId(OutPatient outPatient);
+    public  int insertOutPatientByPatient(OutPatient outPatient);
 }
