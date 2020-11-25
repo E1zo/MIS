@@ -3,8 +3,8 @@
 <mapper namespace="com.yi.mapper.DrugMapper">
 
     <insert id="insertDrug" parameterType="Drug">
-        insert into mis.drug (drugid,name,pinyin,unit,specification,price,quantity)
-        values (#{drugid},#{name},#{pinyin},#{unit},#{specification},#{price},#{quantity});
+        insert into mis.drug (drugname,pinyin,unit,specification,price,quantity)
+        values (#{drugname},#{pinyin},#{unit},#{specification},#{price},#{quantity});
     </insert>
 
     <delete id="deleteDrugById" parameterType="int">
@@ -13,11 +13,11 @@
 
     <update id="updateDrug" parameterType="Drug">
         update mis.drug
-        set name = #{name},pinyin = #{pinyin},unit = #{unit},specification = #{specification},price = #{price},quantity = #{quantity}
+        set drugname = #{drugname},pinyin = #{pinyin},unit = #{unit},specification = #{specification},price = #{price},quantity = #{quantity}
         where drugid = #{drugid};
     </update>
 
-    <select id="quertDrugById" resultType="Drug">
+    <select id="queryDrugById" resultType="Drug">
         select * from mis.drug where drugid = #{drugid};
     </select>
 

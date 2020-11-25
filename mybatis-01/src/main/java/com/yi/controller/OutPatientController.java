@@ -34,7 +34,7 @@ public class OutPatientController {
         Patient patient =patientService.findPatientById(outPatientService.findPatientIdByCaseId(caseid));
         OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
         model.addAttribute("outpatientid",outPatient.getOutpatientid());
-        model.addAttribute("patientname",patient.getName());
+        model.addAttribute("patientname",patient.getPatientname());
         model.addAttribute("patientage",patient.getAge());
         model.addAttribute("patientsex",patient.getSex());
         model.addAttribute("patientaddress",patient.getAddress());

@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 
-    public User queryByName(String name) {
-        return userMapper.queryByName(name);
+    public User queryByName(String username) {
+        return userMapper.queryByName(username);
     }
 }

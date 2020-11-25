@@ -18,17 +18,17 @@ public class DepartmentController {
     DepartmentService departmentService;
 
     //查看所有部门页面（查询所有部门）
-    @RequestMapping("allDepartment")
+    @RequestMapping("/allDepartment")
     public String list(Model model){
         List<Department> list = departmentService.queryAllDpt();
-        model.addAttribute("list",list);
-        return "allDepartment";
+        model.addAttribute("dptList",list);
+        return "admin/allDepartment";
     }
 
     //跳转到 添加部门 页面
     @RequestMapping("/toAddDepartment")
     public String toAddDrug(){
-        return "addDepartment";
+        return "admin/addDepartment";
     }
 
     //添加部门
@@ -42,8 +42,8 @@ public class DepartmentController {
     @RequestMapping("/toUpdateDepartment")
     public String toUpdateDrug(int departmentid,Model model){
         Department department = departmentService.queryDptById(departmentid);
-        model.addAttribute("QDpt",department);
-        return "updateDepartment";
+        model.addAttribute("Qdpt",department);
+        return "admin/updateDepartment";
     }
 
     //修改部门

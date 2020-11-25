@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新部门信息</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/admin/updateDepartment}">
+        <div>
+            <input type="hidden" name="departmentid" th:value="${Qdpt.departmentid}">
+        </div>
+        <div>
+            <label>部门名称</label>
+            <input type="text" name="dptname" th:value="${Qdpt.dptname}">
+        </div>
+        <div>
+            <label>部门介绍</label>
+            <input type="text" name="description" th:value="${Qdpt.description}">
+        </div>
+        <div>
+            <input type="submit" value="修改部门">
+        </div>
+    </form>
+</div>
+</body>
+</html>

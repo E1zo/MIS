@@ -2,7 +2,7 @@ package com.yi.pojo;
 
 public class User {
     private int id;
-    private String name;
+    private String username;
     private String password;
     private String worktype ;
     private  String state;
@@ -12,7 +12,7 @@ public class User {
 
     public User(int id, String name, String password, String worktype, String state) {
         this.id = id;
-        this.name = name;
+        this.username = name;
         this.password = password;
         this.worktype = worktype;
         this.state = state;
@@ -29,11 +29,11 @@ public class User {
     }
 
     public String getName() {
-        return name;
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -64,7 +64,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", worktype='" + worktype + '\'' +
                 ", state='" + state + '\'' +

@@ -13,7 +13,7 @@ public class Doctor {
 
     private Integer doctorid;
 
-    private String name;
+    private String docname;
 
     private String sex;
 
@@ -37,12 +37,12 @@ public class Doctor {
 
 
     public String getName() {
-        return name;
+        return docname;
     }
 
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setName(String docname) {
+        this.docname = docname == null ? null : docname.trim();
     }
 
     public String getSex() {

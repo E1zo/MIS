@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+</head>
+<body>
+
+    <div>
+        <a th:href="@{/admin/toAddDepartment}">增加部门</a>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>部门ID</th>
+                    <th>部门名称</th>
+                    <th>部门介绍</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="dpt:${dptList}">
+                    <td th:text="${dpt.departmentid}"></td>
+                    <td th:text="${dpt.dptname}"></td>
+                    <td th:text="${dpt.description}"></td>
+                    <td>
+                        <a th:href="@{/admin/toUpdateDepartment(departmentid=${dpt.departmentid})}">修改</a>
+                        <a th:href="@{/admin/deleteDepartment(departmentid=${dpt.departmentid})}">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

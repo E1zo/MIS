@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新药品信息</title>
+</head>
+<body>
+
+<form th:action="@{/admin/updateDrug}">
+    <div>
+        <input type="hidden" name="drugid" th:value="${QDrug.drugid}">
+    </div>
+    <div>
+        <label>药品名称</label>
+        <input type="text" name="drugname" th:value="${QDrug.drugname}">
+    </div>
+    <div>
+        <label>药品拼音码</label>
+        <input type="text" name="pinyin" th:value="${QDrug.pinyin}">
+    </div>
+    <div>
+        <label>药品单位</label>
+        <input type="text" name="unit" th:value="${QDrug.unit}">
+    </div>
+    <div>
+        <label>药品规格</label>
+        <input type="text" name="specification" th:value="${QDrug.specification}">
+    </div>
+    <div>
+        <label>药品价格</label>
+        <input type="text" name="price" th:value="${QDrug.price}">
+    </div>
+    <div>
+        <label>药品数量</label>
+        <input type="text" name="quantity" th:value="${QDrug.quantity}">
+    </div>
+    <div>
+        <input type="submit" value="修改药品">
+    </div>
+</form>
+
+</body>
+</html>

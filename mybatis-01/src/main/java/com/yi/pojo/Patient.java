@@ -14,7 +14,7 @@ public class Patient {
 
     private Integer patientid;
     private String sex;
-    private String name;
+    private String patientname;
     private String age;
     private String sidno;
     private String sidtype;
@@ -33,7 +33,5 @@ public class Patient {
     private String cardtype;
     private double balance;
     private double creditlimit;
-
-
 
 }

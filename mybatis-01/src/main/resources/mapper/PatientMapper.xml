@@ -3,8 +3,8 @@
 <mapper namespace="com.yi.mapper.PatientMapper">
 
     <insert id="insertPatient" parameterType="com.yi.pojo.Patient" >
-      INSERT  INTO mis.patient (name,sex,age,sidno,sidtype,address,phone,companynameaddress,companyphone,email,firstman,firstquery,firstphone,firstaddress,recorddate,hispass,hisoperate,cardtype,balance,creditlimit)
-      values (#{name},#{sex},#{age},#{sidno},#{sidtype},#{address},#{phone},#{companynameaddress},#{companyphone},#{email},#{firstman},#{firstquery},#{firstphone},#{firstaddress},#{recorddate},#{hispass},#{hisoperate},#{cardtype},#{balance},#{creditlimit});
+      INSERT  INTO mis.patient (patientname,sex,age,sidno,sidtype,address,phone,companynameaddress,companyphone,email,firstman,firstquery,firstphone,firstaddress,recorddate,hispass,hisoperate,cardtype,balance,creditlimit)
+      values (#{patientname},#{sex},#{age},#{sidno},#{sidtype},#{address},#{phone},#{companynameaddress},#{companyphone},#{email},#{firstman},#{firstquery},#{firstphone},#{firstaddress},#{recorddate},#{hispass},#{hisoperate},#{cardtype},#{balance},#{creditlimit});
     </insert>
 
     <select id="findPatientById" parameterType="Integer" resultType="Patient">
