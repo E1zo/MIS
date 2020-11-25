@@ -29,15 +29,15 @@ public class ShiroConfig {
         Map<String, String> filterMap =new LinkedHashMap<>();
         //授权
 
-        filterMap.put("/doctor/*","authc");
+        filterMap.put("/doctor/*","anon");
         filterMap.put("/drug/*","authc");
-        filterMap.put("/outpatient/*","authc");
-        filterMap.put("/patient/*","authc");
+        filterMap.put("/outpatient/*","anon");
+        filterMap.put("/patient/*","anon");
         filterMap.put("/setting/*","authc");
         filterMap.put("/user/*","authc");
 
         filterMap.put("/patient/*","perms[Doctor]");
-        filterMap.put("/outpatient/*","perms[Doctor]");
+//        filterMap.put("/outpatient/*","perms[Doctor]");
 
 
 

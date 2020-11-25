@@ -20,4 +20,9 @@ public class OutPatientServiceImpl implements  OutPatientService{
         OutPatient outPatient=outpatientMapper.findOutPatientByPatientId(patientid);
         return outPatient;
     }
+
+    @Override
+    public int insertOutPatientBypatientId(OutPatient outPatient) {
+        return outpatientMapper.insertOutPatientBypatientId(outPatient);
+    }
 }

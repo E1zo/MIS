@@ -20,12 +20,12 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         System.out.println("执行了授权操作");
-        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        Subject subject = SecurityUtils.getSubject();
-        User currentUser= (User) subject.getPrincipal();
-        info.addStringPermission(currentUser.getWorktype());
-        System.out.println(currentUser.getWorktype());
-        return info;
+//        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+//        Subject subject = SecurityUtils.getSubject();
+//        User currentUser= (User) subject.getPrincipal();
+//        info.addStringPermission(currentUser.getWorktype());
+//        System.out.println(currentUser.getWorktype());
+        return null;
 
     }
 

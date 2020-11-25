@@ -21,7 +21,11 @@ public class DepartmentController {
     @RequestMapping("allDepartment")
     public String list(Model model){
         List<Department> list = departmentService.queryAllDpt();
-        model.addAttribute("list",list);
+
+        for(int i=0;i<list.size();i++){
+            model.addAttribute("list", list.get(i));
+        }
+
         return "allDepartment";
     }
 

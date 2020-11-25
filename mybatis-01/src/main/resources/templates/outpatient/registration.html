@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+<script>
+
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -7,21 +13,82 @@
 </head>
 <body>
 <h1>预约挂号</h1>
-<form th:action="@{/outpatient/Registration}">
+<form th:action="@{/outpatient/search}">
     <p>输入病历号进行检索：<input type="text" name="caseid"></p>
     <input type="submit">
 </form>
-
 <h2>病人资料</h2>
-门诊编号:<p th:text="${outpatientid}"></p>
-姓名：<p th:text="${patientname}"></p>
-年龄：<p th:text="${patientage}"></p>
-性别：<p th:text="${patientsex}"></p>
-家庭住址：<p th:text="${patientaddress}"></p>
-联系电话：<p th:text="${patientphone}"></p>
-紧急联系人：<p th:text="${patientfirstman}"></p>
-关系：<p th:text="${patientfirstquery}"></p>
-紧急联系人电话<p th:text="${patientfirstphone}"></p>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>门诊编号</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td th:text="${outpatientid}"></td>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家庭住址</th>
+            <th>联系电话</th>
+            <th>紧急联系人</th>
+            <th>关系</th>
+            <th>联系人电话</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="pat:${patient}">
+            <td th:text="${pat.name}"></td>
+            <td th:text="${pat.age}"></td>
+            <td th:text="${pat.sex}"></td>
+            <td th:text="${pat.address}"></td>
+            <td th:text="${pat.phone}"></td>
+            <td th:text="${pat.firstman}"></td>
+            <td th:text="${pat.firstquery}"></td>
+            <td th:text="${pat.firstphone}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+<h2>挂号</h2>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>挂号医生</th>
+            <th>挂号费用</th>
+            <th>选择</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="doc:${doctor}">
+            <td th:text="${doc.name}"></td>
+            <td th:text="${doc.registrationfee}"></td>
+            <td >
+                    <a href="/outpatient/registration?doc.doctorid">挂号</a>
+            </td>
+
+
+        </tr>
+        </tbody>
+
+    </table>
+
 
 
 

@@ -11,4 +11,5 @@ public interface OutPatientMapper {
 
     public Integer findPatientIdByCaseId(Integer caseid);
     public OutPatient findOutPatientByPatientId(Integer patientid);
+    public int insertOutPatientBypatientId(OutPatient outPatient);
 }
