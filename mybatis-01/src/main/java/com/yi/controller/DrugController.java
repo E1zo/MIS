@@ -21,14 +21,14 @@ public class DrugController {
     @RequestMapping("allDrug")
     public String list(Model model){
         List<Drug> list = drugService.queryAllDrug();
-        model.addAttribute("list",list);
-        return "allDrug";
+        model.addAttribute("drugList",list);
+        return "admin/allDrug";
     }
 
     //跳转到 添加药品 页面
     @RequestMapping("/toAddDrug")
     public String toAddDrug(){
-        return "addDrug";
+        return "admin/addDrug";
     }
 
     //添加药品
@@ -43,7 +43,7 @@ public class DrugController {
     public String toUpdateDrug(int drugid,Model model){
         Drug drug = drugService.queryDrugById(drugid);
         model.addAttribute("QDrug",drug);
-        return "updateDrug";
+        return "admin/updateDrug";
     }
 
     //修改药品

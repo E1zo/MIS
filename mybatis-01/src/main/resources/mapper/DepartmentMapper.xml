@@ -3,8 +3,8 @@
 <mapper namespace="com.yi.mapper.DepartmentMapper">
 
     <insert id="insertDpt" parameterType="Department">
-        insert into mis.department (departmentid,name,description)
-        values (#{departmentid},#{name},#{description});
+        insert into mis.department (dptname,description)
+        values (#{dptname},#{description});
     </insert>
 
     <delete id="deleteDptById" parameterType="int">
@@ -13,7 +13,7 @@
 
     <update id="updateDpt" parameterType="Department">
         update mis.department
-        set name = #{name},description = #{description}
+        set dptname = #{dptname},description = #{description}
         where departmentid = #{departmentid};
     </update>
 

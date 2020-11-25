@@ -3,6 +3,6 @@
 <mapper namespace="com.yi.mapper.UserMapper">
 
     <select id="queryByName" parameterType="String" resultType="User">
-       SELECT * FROM user where name = #{name}
+       SELECT * FROM user where username = #{username}
     </select>
 </mapper>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新的部门信息</title>
+</head>
+<body>
+    <div>
+        <form th:action="@{/admin/addDepartment}">
+            <div>
+                <label for="dptName">部门名称</label>
+                <input type="text" name="dptname" id="dptName">
+            </div>
+            <div>
+                <label for="dptDescription">部门介绍</label>
+                <input type="text" name="description" id="dptDescription">
+            </div>
+            <div>
+                <input type="submit" value="添加部门">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

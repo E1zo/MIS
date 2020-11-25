@@ -43,10 +43,21 @@ public class OutPatientController {
         OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
         session.setAttribute("patientid",patient.getPatientid());
         model.addAttribute("outpatientid",outPatient.getOutpatientid());
+<<<<<<< HEAD
         model.addAttribute("patient",patient);
         //查出所有医生
         List<Doctor> doctor=doctorService.queryAllDoc();
         model.addAttribute("doctor",doctor);
+=======
+        model.addAttribute("patientname",patient.getPatientname());
+        model.addAttribute("patientage",patient.getAge());
+        model.addAttribute("patientsex",patient.getSex());
+        model.addAttribute("patientaddress",patient.getAddress());
+        model.addAttribute("patientphone",patient.getPhone());
+        model.addAttribute("patientfirstman",patient.getFirstman());
+        model.addAttribute("patientfirstquery",patient.getFirstquery());
+        model.addAttribute("patientfirstphone",patient.getFirstphone());
+>>>>>>> d2c24a8c159ac14cafb298e094784071b544109b
         return "/outpatient/registration.html";
     }
 

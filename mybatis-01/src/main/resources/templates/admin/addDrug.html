@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加药品信息</title>
+</head>
+<body>
+
+<div>
+    <form th:action="@{/admin/addDrug}">
+        <div>
+            <label>药品名称</label>
+            <input type="text" name="drugname">
+        </div>
+        <div>
+            <label>药品拼音码</label>
+            <input type="text" name="pinyin">
+        </div>
+        <div>
+            <label>药品单位</label>
+            <input type="text" name="unit">
+        </div>
+        <div>
+            <label>药品规格</label>
+            <input type="text" name="specification">
+        </div>
+        <div>
+            <label>药品价格</label>
+            <input type="text" name="price">
+        </div>
+        <div>
+            <label>药品数量</label>
+            <input type="text" name="quantity">
+        </div>
+        <div>
+            <input type="submit" value="添加药品">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

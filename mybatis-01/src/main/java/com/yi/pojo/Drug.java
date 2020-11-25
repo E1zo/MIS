@@ -14,7 +14,7 @@ public class Drug {
     private Integer drugid;
 
 
-    private String name;
+    private String drugname;
 
 
     private String pinyin;
@@ -41,12 +41,12 @@ public class Drug {
 
 
     public String getName() {
-        return name;
+        return drugname;
     }
 
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setName(String drugname) {
+        this.drugname = drugname == null ? null : drugname.trim();
     }
 
 
@@ -103,7 +103,7 @@ public class Drug {
     public String toString() {
         return "Drug{" +
                 "drugid=" + drugid +
-                ", name='" + name + '\'' +
+                ", name='" + drugname + '\'' +
                 ", pinyin='" + pinyin + '\'' +
                 ", unit='" + unit + '\'' +
                 ", specification='" + specification + '\'' +

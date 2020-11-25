@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>药品管理</title>
+</head>
+<body>
+
+<div>
+    <a th:href="@{/admin/toAddDrug}">增加药品</a>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>药品ID</th>
+            <th>药品名称</th>
+            <th>药品拼音码</th>
+            <th>药品单位</th>
+            <th>药品规格</th>
+            <th>药品价格</th>
+            <th>药品数量</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="drug:${drugList}">
+            <td th:text="${drug.drugid}"></td>
+            <td th:text="${drug.name}"></td>
+            <td th:text="${drug.pinyin}"></td>
+            <td th:text="${drug.unit}"></td>
+            <td th:text="${drug.specification}"></td>
+            <td th:text="${drug.price}"></td>
+            <td th:text="${drug.quantity}"></td>
+            <td>
+                <a th:href="@{/admin/toUpdateDrug(drugid=${drug.drugid})}">修改</a>
+                <a th:href="@{/admin/deleteDrug(drugid=${drug.drugid})}">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

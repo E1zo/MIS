@@ -14,7 +14,7 @@ public class Department {
     private Integer departmentid;
 
 
-    private String name;
+    private String dptname;
 
 
     private String description;
@@ -29,12 +29,12 @@ public class Department {
 
 
     public String getName() {
-        return name;
+        return dptname;
     }
 
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setName(String dptname) {
+        this.dptname = dptname == null ? null : dptname.trim();
     }
 
 
