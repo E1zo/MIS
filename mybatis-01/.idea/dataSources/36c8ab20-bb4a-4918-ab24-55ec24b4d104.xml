@@ -933,7 +933,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
     <table id="296" parent="4" name="outpatient"/>
     <table id="297" parent="4" name="patient"/>
     <table id="298" parent="4" name="prescription"/>
-    <table id="299" parent="4" name="prescription medication"/>
+    <table id="299" parent="4" name="prescriptionmedication"/>
     <table id="300" parent="4" name="user"/>
     <column id="301" parent="289" name="cardid">
       <Position>1</Position>
@@ -1079,7 +1079,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="328" parent="292" name="name">
+    <column id="328" parent="292" name="dptname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1099,7 +1099,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="332" parent="293" name="name">
+    <column id="332" parent="293" name="docname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1155,7 +1155,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="343" parent="294" name="name">
+    <column id="343" parent="294" name="drugname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1275,7 +1275,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
     </column>
     <column id="366" parent="296" name="Iscancel">
       <Position>6</Position>
-      <DataType>varchar(2)|0s</DataType>
+      <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="367" parent="296" name="patientpk">
@@ -1322,7 +1322,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="375" parent="297" name="name">
+    <column id="375" parent="297" name="patientname">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1507,7 +1507,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="412" parent="300" name="name">
+    <column id="412" parent="300" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>

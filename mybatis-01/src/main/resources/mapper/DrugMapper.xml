@@ -25,4 +25,10 @@
         select * from mis.drug;
     </select>
 
+    <update id="takeDrug" parameterType="Drug">
+        update mis.drug
+        set quantity = quantity - 1
+        where drugid = #{drugid} and quantity > 0;
+    </update>
+
 </mapper>

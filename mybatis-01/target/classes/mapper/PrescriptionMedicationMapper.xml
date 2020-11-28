@@ -6,7 +6,7 @@
 
 
     <select id="queryPrescriptionMedicationByPrescriptionId"  resultType="PrescriptionMedication">
-    SELECT * FROM prescriptionmedication WHERE prescriptionid=#{prescription}
+    SELECT * FROM prescriptionmedication WHERE prescriptionid=#{prescriptionid}
     </select>
 
     <select id="queryAlldrugid"  resultType="Integer">
@@ -21,6 +21,6 @@
     </insert>
 
     <update id="updatePresciptionMedication">
- UPDATE  prescriptionmedication SET number=#{number},total=#{total} WHERE prescriptionid=#{prescriptionid} AND drugid=#{drugid} ;
+        UPDATE  prescriptionmedication SET number=#{number},total=#{total} WHERE prescriptionid=#{prescriptionid} AND drugid=#{drugid} ;
     </update>
 </mapper>

@@ -37,4 +37,9 @@ public class DrugServiceImpl implements DrugService {
     public List<Drug> queryAllDrug() {
         return drugMapper.queryAllDrug();
     }
+
+    @Override
+    public int takeDrug(Drug drug) {
+        return drugMapper.takeDrug(drug);
+    }
 }

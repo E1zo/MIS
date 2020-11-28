@@ -59,4 +59,23 @@ public class DrugController {
         drugService.deleteDrugById(drugid);
         return "redirect:/admin/allDrug";
     }
+
+    //取药
+    @RequestMapping("/takeDrug")
+    public String takeDrug(Drug drug){
+        drugService.takeDrug(drug);
+        return "redirect:/admin/allDrug";
+    }
+
+    //获取药品数量
+    /*@RequestMapping("/getDrugNumber")
+    public String getDrugNumber(int quantity){
+        String msg = "";
+
+        if(quantity == 0){
+            msg = "药品数量不足，不能进行取药操作！";
+        }
+
+        return msg;
+    }*/
 }

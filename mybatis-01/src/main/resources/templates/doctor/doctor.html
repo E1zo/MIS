@@ -57,12 +57,11 @@
 </div>
 
 
-
 <form action="/updatesickInfo">
     <label>
         <h2>诊断信息</h2>
-        <input type="text" name="sickinfo" />
-        <input type="submit" value="提交诊断信息" />
+        <input type="text" name="sickinfo"/>
+        <input type="submit" value="提交诊断信息"/>
     </label>
 </form>
 
@@ -105,24 +104,24 @@
 
 
 <form action="/doctor/cure">
-<table>
-    <thead>
-    <tr>
-        <th>药品id</th>
-        <th>药品数量</th>
-        <th>药品合计</th>
+    <table>
+        <thead>
+        <tr>
+            <th>药品id</th>
+            <th>药品数量</th>
+            <th>药品合计</th>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="pre:${prescription}">
-        <td> <input name="drugid" type="text" th:value="${pre.drugid}"/></td>
-        <td><input name="number" type="number" th:value="${pre.number}"></td>
-        <td th:text="${pre.total}"></td>
-    </tr>
-    </tbody>
-</table>
-    <td>  <input type="submit" value="提交处方"/></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pre:${prescription}">
+            <td><input name="drugid" type="text" th:value="${pre.drugid}"/></td>
+            <td><input name="number" type="number" th:value="${pre.number}"></td>
+            <td th:text="${pre.total}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <td><input type="submit" value="提交处方"/></td>
 </form>
 </body>
 </html>

@@ -24,4 +24,7 @@ public interface DrugMapper {
 
     //根据ID查询药品
     Drug queryDrugById(int drugid);
+
+    //取药操作
+    int takeDrug(Drug drug);
 }

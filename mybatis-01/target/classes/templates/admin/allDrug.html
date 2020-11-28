@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>药品管理</title>
 </head>
+
+<!--<script src="/statics/js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    function tips(){
+        alert([[${msg}]]);
+    }
+</script>-->
+
 <body>
 
 <div>
@@ -32,9 +40,10 @@
             <td th:text="${drug.unit}"></td>
             <td th:text="${drug.specification}"></td>
             <td th:text="${drug.price}"></td>
-            <td th:text="${drug.quantity}"></td>
+            <td id="quantity" th:text="${drug.quantity}"></td>
             <td>
                 <a th:href="@{/admin/toUpdateDrug(drugid=${drug.drugid})}">修改</a>
+                <a th:href="@{/admin/takeDrug(drugid=${drug.drugid})}">取药</a>
                 <a th:href="@{/admin/deleteDrug(drugid=${drug.drugid})}">删除</a>
             </td>
         </tr>
@@ -43,4 +52,5 @@
 </div>
 
 </body>
+
 </html>

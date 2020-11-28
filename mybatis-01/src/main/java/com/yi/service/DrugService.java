@@ -23,4 +23,7 @@ public interface DrugService {
     //查询全部
     List<Drug> queryAllDrug();
 
+    //取药操作
+    int takeDrug(Drug drug);
+
 }
