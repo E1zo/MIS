@@ -47,6 +47,11 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
+    public Patient findPatientByCaseId(Integer caseid) {
+        return patientMapper.findPatientByCaseId(caseid);
+    }
+
+    @Override
     public Patient findPatientById(Integer patientid) {
         return patientMapper.findPatientById(patientid);
     }

@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Prescription {
 
-    private Integer descriptionid;
+    private Integer prescriptionid;
 
     private Integer outpatientid;
 }
