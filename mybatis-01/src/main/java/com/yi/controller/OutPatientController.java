@@ -42,9 +42,12 @@ public class OutPatientController {
 
     @RequestMapping("/outpatient/search")
     public String search(Integer caseid, Model model, HttpSession session){
-        Patient patient =patientService.findPatientById(outPatientService.findPatientIdByCaseId(caseid));
+        Patient patient =patientService.findPatientByCaseId(caseid);
 
         OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
+
+
+
         session.setAttribute("patient",patient);
         model.addAttribute("outpatientid",outPatient.getOutpatientid());
         model.addAttribute("patient",patient);

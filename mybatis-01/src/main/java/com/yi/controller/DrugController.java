@@ -18,7 +18,7 @@ public class DrugController {
     DrugService drugService;
 
     //查看所有药品页面（查询所有药品）
-    @RequestMapping("allDrug")
+    @RequestMapping("/allDrug")
     public String list(Model model){
         List<Drug> list = drugService.queryAllDrug();
         model.addAttribute("drugList",list);

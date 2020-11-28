@@ -2,12 +2,128 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    　
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+
     <title>Title</title>
 </head>
 <body>
-<h1>医生服务</h1>
+<h1>医生诊断</h1>
+<form th:action="@{/doctor/search}">
+    <label>
+        输入门诊号进行检索
+        <input type="text" name="caseid" th:value="${caseid}">
+    </label>
+    <input type="submit">
+</form>
+<h2>病人资料</h2>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>门诊编号</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td th:text="${outpatientid}"></td>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家庭住址</th>
+            <th>联系电话</th>
+            <th>紧急联系人</th>
+            <th>关系</th>
+            <th>联系人电话</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pat:${patient}">
+            <td th:text="${pat.patientname}"></td>
+            <td th:text="${pat.age}"></td>
+            <td th:text="${pat.sex}"></td>
+            <td th:text="${pat.address}"></td>
+            <td th:text="${pat.phone}"></td>
+            <td th:text="${pat.firstman}"></td>
+            <td th:text="${pat.firstquery}"></td>
+            <td th:text="${pat.firstphone}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
-<a th:href="@{/outpatient}">医生就诊</a>
+
+<form action="/updatesickInfo">
+    <label>
+        <h2>诊断信息</h2>
+        <input type="text" name="sickinfo" />
+        <input type="submit" value="提交诊断信息" />
+    </label>
+</form>
+
+<label>
+    <h2>处方信息</h2>
+    <input type="text" />
+</label>
+<!--    药品拼音码表-->
+<form action="/doctor/addDrug">
+    <table>
+        <thead>
+        <tr>
+            <th>药品id</th>
+            <th>药品拼音码</th>
+            <th>药品名称</th>
+            <th>药品单位</th>
+            <th>药品单价</th>
+            <th>库存数量</th>
+            <th>添加药品</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="drug:${drugs}">
+            <td th:text="${drug.drugid}"></td>
+            <td th:text="${drug.pinyin}"></td>
+            <td th:text="${drug.drugname}"></td>
+            <td th:text="${drug.unit}"></td>
+            <td th:text="${drug.price}"></td>
+            <td th:text="${drug.quantity}"></td>
+            <td>
+                <a th:href="@{/doctor/addDrug(drugid=${drug.drugid})}">添加</a>
+            </td>
+
+        </tr>
+
+        </tbody>
+        <h2 th:text="${msg}" style="color:#ff0000;"></h2>
+    </table>
+</form>
+
+
+<form action="/doctor/cure">
+<table>
+    <thead>
+    <tr>
+        <th>药品id</th>
+        <th>药品数量</th>
+        <th>药品合计</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pre:${prescription}">
+        <td> <input name="drugid" type="text" th:value="${pre.drugid}"/></td>
+        <td><input name="number" type="number" th:value="${pre.number}"></td>
+        <td th:text="${pre.total}"></td>
+    </tr>
+    </tbody>
+</table>
+    <td>  <input type="submit" value="提交处方"/></td>
+</form>
 </body>
 </html>

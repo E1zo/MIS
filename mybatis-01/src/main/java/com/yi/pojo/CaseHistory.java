@@ -25,6 +25,11 @@ public class CaseHistory {
 
     private Date recorddate;
 
+    public CaseHistory(Integer caseid, String sickinfo, Date recorddate) {
+        this.caseid = caseid;
+        this.sickinfo = sickinfo;
+        this.recorddate = recorddate;
+    }
 
     public Integer getCaseid() {
         return caseid;

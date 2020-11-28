@@ -11,4 +11,12 @@
        SELECT * FROM patient where patientid = #{patientid}
     </select>
 
+
+    <select id="findPatientByCaseId" parameterType="Integer" resultType="Patient">
+
+
+
+       SELECT * FROM patient
+WHERE patientid=(SELECT patientid FROM casehistory WHERE caseid=#{caseid})
+    </select>
 </mapper>

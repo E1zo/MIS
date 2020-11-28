@@ -20,5 +20,7 @@ public interface PatientService {
                                 double creditlimit
                             );
 
+    public Patient findPatientByCaseId(Integer caseid);
+
     public Patient findPatientById(Integer patientid);
 }

@@ -24,6 +24,7 @@ public interface PatientMapper {
 
                           );
 
+  public Patient findPatientByCaseId(Integer caseid);
 
   public Patient findPatientById(Integer patientid);
 }

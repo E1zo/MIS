@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.mapper.PrescriptionMedicationMapper">
+
+
+
+
+    <select id="queryPrescriptionMedicationByPrescriptionId"  resultType="PrescriptionMedication">
+    SELECT * FROM prescriptionmedication WHERE prescriptionid=#{prescription}
+    </select>
+
+    <select id="queryAlldrugid"  resultType="Integer">
+    SELECT drugid FROM prescriptionmedication
+    </select>
+    <select id="queryAllnumber"  resultType="Integer">
+    SELECT number FROM prescriptionmedication
+    </select>
+    <insert id="insertPresciptionMedication" parameterType="PrescriptionMedication">
+        INSERT into prescriptionmedication(prescriptionid,drugid,number,total)
+        VALUES (#{prescriptionid},#{drugid},#{number},#{total});
+    </insert>
+
+    <update id="updatePresciptionMedication">
+ UPDATE  prescriptionmedication SET number=#{number},total=#{total} WHERE prescriptionid=#{prescriptionid} AND drugid=#{drugid} ;
+    </update>
+</mapper>
