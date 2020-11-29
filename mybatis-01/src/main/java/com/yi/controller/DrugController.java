@@ -1,13 +1,15 @@
 package com.yi.controller;
 
-import com.yi.pojo.Drug;
-import com.yi.service.DrugService;
+import com.yi.pojo.*;
+import com.yi.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -16,6 +18,16 @@ public class DrugController {
 
     @Autowired
     DrugService drugService;
+    @Autowired
+    PrescriptionMedicationService prescriptionMedicationService;
+    @Autowired
+    PatientService patientService;
+    @Autowired
+    OutPatientService outPatientService;
+    @Autowired
+    DoctorService doctorService;
+    @Autowired
+    PrescriptionService prescriptionService;
 
     //查看所有药品页面（查询所有药品）
     @RequestMapping("/allDrug")
@@ -78,4 +90,59 @@ public class DrugController {
 
         return msg;
     }*/
+    //查询病历号
+    @RequestMapping("/search")
+    public String search(Integer caseid, Model model, HttpSession session){
+        session.setAttribute("caseid",caseid);
+        model.addAttribute("caseid",caseid);
+        Patient patient =patientService.findPatientByCaseId(caseid);
+
+        OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
+        session.setAttribute("outpatientid",outPatient.getOutpatientid());
+        model.addAttribute("outpatientid",outPatient.getOutpatientid());
+        model.addAttribute("patient",patient);
+        model.addAttribute("drugs",drugService.queryAllDrug());
+
+        Integer outpatientid= (Integer) session.getAttribute("outpatientid");
+        Prescription pres=prescriptionService.queryPrescriptionByOutPatientId(outpatientid);
+        List<PrescriptionMedication> presm = prescriptionMedicationService.queryPrescriptionMedicationByPrescriptionId(pres.getPrescriptionid());
+        model.addAttribute("prescription",presm);
+
+        //查询所有药品库存
+        List<Drug> list = drugService.queryAllDrug();
+        model.addAttribute("drugList",list);
+
+        return "/admin/allDrug";
+    }
+    @RequestMapping("/giveDrug")
+    public String Doctor(@RequestParam(value = "drugid")Integer[] drugid, @RequestParam(value = "number")Integer[] number, Model model, HttpSession session) {
+       //取到所有药品
+        List<Integer> list = drugService.queryAllDrugId();
+        List<Drug>  drugs=drugService.queryAllDrug();
+
+        for(int i=0;i<drugid.length;i++) {
+             if (drugs.get(drugid[i]-1).getQuantity() - number[i]< 0) {
+                    model.addAttribute("msg", "数量不够了哥");
+                }
+             else {
+                    Drug drug = new Drug(drugid[i], drugs.get(drugid[i]-1).getQuantity() - number[i]);
+                    drugService.updateDrugQuantity(drug);
+                    model.addAttribute("msg", "太对了哥");
+                }
+
+
+       }
+
+        //获取病人信息
+        Integer caseid = (Integer) session.getAttribute("caseid");
+        Patient patient = patientService.findPatientByCaseId(caseid);
+        OutPatient outPatient = outPatientService.findOutPatientByPatientId(patient.getPatientid());
+        Prescription pres=prescriptionService.queryPrescriptionByOutPatientId(outPatient.getOutpatientid());
+        List<PrescriptionMedication> presm = prescriptionMedicationService.queryPrescriptionMedicationByPrescriptionId(pres.getPrescriptionid());
+        model.addAttribute("prescription", presm);
+
+        List<Drug>  drug=drugService.queryAllDrug();
+        model.addAttribute("drugList",drug);
+        return "/admin/allDrug";
+    }
 }

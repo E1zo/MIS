@@ -35,9 +35,7 @@ class Tt {
     PrescriptionMedicationService prescriptionMedicationService;
     @Test
    void contextLoads(){
-
-
-        List<Integer> a=prescriptionMedicationService.queryAlldrugid();
-        System.out.println(a.contains(2));
+        Drug drug = new Drug(1,100);
+        drugService.updateDrugQuantity(drug);
     }
 }

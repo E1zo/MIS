@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,53 +17,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae57b5e5-cdaa-48a2-ae1d-cfe85710e1e0" name="Default Changelist" comment="first Version">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/myGit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/DrugStoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/statics/js/jquery-3.3.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/.idea/dataSources/36c8ab20-bb4a-4918-ab24-55ec24b4d104.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/.idea/dataSources/36c8ab20-bb4a-4918-ab24-55ec24b4d104.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/mybatis-01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/DoctorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/DrugController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/controller/DrugController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/mapper/DrugMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/mapper/DrugMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/pojo/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/pojo/Drug.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/service/DrugService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/service/DrugService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/service/DrugServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/yi/service/DrugServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/mapper/DrugMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/mapper/DrugMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/mapper/PrescriptionMedicationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/mapper/PrescriptionMedicationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDrug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDrug.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/adminPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/doctor/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/doctor/doctor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/drug/drug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/drugStore/drugStore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/drugStore/drugStore.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/drugStore/drugStore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/test/java/com/yi/Tt.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/test/java/com/yi/Tt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/DoctorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/DrugController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/controller/DrugController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/mapper/DrugMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/mapper/DrugMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/pojo/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/pojo/Drug.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/service/DrugService.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/service/DrugService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/service/DrugServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/yi/service/DrugServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/mapper/DrugMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/mapper/DrugMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/mapper/PrescriptionMedicationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/mapper/PrescriptionMedicationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/admin/allDrug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/templates/admin/allDrug.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/adminPage.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/doctor/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/templates/doctor/doctor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/drug/drug.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/drugStore/drugStore.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/templates/drugStore/drugStore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/test-classes/com/yi/Tt.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/test-classes/com/yi/Tt.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,19 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tt.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatis-01" />
       <extension name="coverage">
@@ -257,7 +216,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -376,10 +335,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="901" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606541857233" />
-    <state x="1421" y="318" key="#com.intellij.ide.util.MemberChooser" timestamp="1606577471507">
+    <state x="1421" y="318" key="#com.intellij.ide.util.MemberChooser" timestamp="1606634918725">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1421" y="318" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606577471507" />
+    <state x="1421" y="318" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606634918725" />
     <state x="841" y="475" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606197773263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -400,38 +359,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="843" y="247" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606581776645" />
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1606583196815">
+    <state width="1581" height="251" key="GridCell.Tab.0.bottom" timestamp="1606642668469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1606583196815">
+    <state width="1581" height="251" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668469" />
+    <state width="1581" height="251" key="GridCell.Tab.0.center" timestamp="1606642668469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1606583196815">
+    <state width="1581" height="251" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668469" />
+    <state width="1581" height="251" key="GridCell.Tab.0.left" timestamp="1606642668469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1606583196815">
+    <state width="1581" height="251" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668469" />
+    <state width="1581" height="251" key="GridCell.Tab.0.right" timestamp="1606642668469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1606583196816">
+    <state width="1581" height="251" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668469" />
+    <state width="1581" height="252" key="GridCell.Tab.1.bottom" timestamp="1606642668429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196816" />
-    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1606583196815">
+    <state width="1581" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668429" />
+    <state width="1581" height="252" key="GridCell.Tab.1.center" timestamp="1606642668428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1606583196815">
+    <state width="1581" height="252" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668428" />
+    <state width="1581" height="252" key="GridCell.Tab.1.left" timestamp="1606642668428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
-    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1606583196815">
+    <state width="1581" height="252" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668428" />
+    <state width="1581" height="252" key="GridCell.Tab.1.right" timestamp="1606642668429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606583196815" />
+    <state width="1581" height="252" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606642668429" />
     <state width="1406" height="329" key="GridCell.Tab.2.bottom" timestamp="1606229282791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

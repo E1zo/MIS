@@ -13,11 +13,18 @@
 </script>-->
 
 <body>
-
+<h2 th:text="${msg}" style="color:#ff0000;"></h2>
 <div>
     <a th:href="@{/admin/toAddDrug}">增加药品</a>
 </div>
 
+<form th:action="@{/admin/search}">
+    <label>
+        输入病历号进行检索
+        <input type="text" name="caseid" th:value="${caseid}">
+    </label>
+    <input type="submit">
+</form>
 <div>
     <table>
         <thead>
@@ -43,14 +50,31 @@
             <td id="quantity" th:text="${drug.quantity}"></td>
             <td>
                 <a th:href="@{/admin/toUpdateDrug(drugid=${drug.drugid})}">修改</a>
-                <a th:href="@{/admin/takeDrug(drugid=${drug.drugid})}">取药</a>
-                <a th:href="@{/admin/deleteDrug(drugid=${drug.drugid})}">删除</a>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+<form th:action="@{/admin/giveDrug}">
+    <table>
+        <thead>
+        <tr>
+            <th>药品id</th>
+            <th>药品数量</th>
+            <th>药品合计</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pre:${prescription}">
+            <td><input name="drugid" type="text" th:value="${pre.drugid}"/></td>
+            <td><input name="number" type="text" th:value="${pre.number}"></td>
+            <td th:text="${pre.total}"></td>
+        </tr>
+        </tbody>
+    </table>
 
+    <input type="submit" value="取药"/>
+</form>
 </body>
 
 </html>

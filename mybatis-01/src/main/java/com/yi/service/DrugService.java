@@ -16,12 +16,13 @@ public interface DrugService {
 
     //更新
     int updateDrug(Drug drug);
-
+    int updateDrugQuantity(Drug drug);
     //根据ID查询
     Drug queryDrugById(int drugid);
 
     //查询全部
     List<Drug> queryAllDrug();
+    List<Integer>queryAllDrugId();
 
     //取药操作
     int takeDrug(Drug drug);

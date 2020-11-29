@@ -18,9 +18,11 @@ public interface DrugMapper {
 
     //更新药品信息
     int updateDrug(Drug drug);
-
+    int updateDrugQuantity(Drug drug);
     //查询所有药品
     List<Drug> queryAllDrug();
+
+    List<Integer>queryAllDrugId();
 
     //根据ID查询药品
     Drug queryDrugById(int drugid);

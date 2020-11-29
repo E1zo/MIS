@@ -17,6 +17,11 @@
         where drugid = #{drugid};
     </update>
 
+    <update id="updateDrugQuantity" parameterType="Drug">
+        update mis.drug
+        set quantity = #{quantity}
+        where drugid = #{drugid};
+    </update>
     <select id="queryDrugById" resultType="Drug">
         select * from mis.drug where drugid = #{drugid};
     </select>
@@ -25,6 +30,9 @@
         select * from mis.drug;
     </select>
 
+    <select id="queryAllDrugId" resultType="Integer">
+        select drugid from mis.drug;
+    </select>
     <update id="takeDrug" parameterType="Drug">
         update mis.drug
         set quantity = quantity - 1

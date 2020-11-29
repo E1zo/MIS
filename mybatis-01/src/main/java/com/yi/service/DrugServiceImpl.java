@@ -28,6 +28,9 @@ public class DrugServiceImpl implements DrugService {
         return drugMapper.updateDrug(drug);
     }
 
+    public int updateDrugQuantity (Drug drug){
+        return drugMapper.updateDrugQuantity(drug);
+    }
     @Override
     public Drug queryDrugById(int drugid) {
         return drugMapper.queryDrugById(drugid);
@@ -36,6 +39,9 @@ public class DrugServiceImpl implements DrugService {
     @Override
     public List<Drug> queryAllDrug() {
         return drugMapper.queryAllDrug();
+    }
+    public List<Integer>queryAllDrugId(){
+       return drugMapper.queryAllDrugId();
     }
 
     @Override

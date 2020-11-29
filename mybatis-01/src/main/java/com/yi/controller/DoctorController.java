@@ -38,6 +38,8 @@ public class DoctorController {
         session.setAttribute("caseid",caseid);
         model.addAttribute("caseid",caseid);
         Patient patient =patientService.findPatientByCaseId(caseid);
+
+
         OutPatient outPatient=outPatientService.findOutPatientByPatientId(patient.getPatientid());
         session.setAttribute("outpatientid",outPatient.getOutpatientid());
         model.addAttribute("outpatientid",outPatient.getOutpatientid());
@@ -79,7 +81,7 @@ public class DoctorController {
 
     @RequestMapping("/doctor/addDrug")
     public String addDrugintoPrescription(Integer drugid,Model model,HttpSession session){
-        System.out.println(drugid);
+
         List<Integer> a=prescriptionMedicationService.queryAlldrugid();
         model.addAttribute("drugs",drugService.queryAllDrug());
         Integer outpatientid= (Integer) session.getAttribute("outpatientid");

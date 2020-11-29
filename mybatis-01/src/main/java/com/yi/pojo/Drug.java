@@ -29,6 +29,11 @@ public class Drug {
 
     private Integer quantity;
 
+    public Drug(Integer drugid, Integer quantity) {
+        this.drugid = drugid;
+        this.quantity = quantity;
+    }
+
 
     public Integer getDrugid() {
         return drugid;
