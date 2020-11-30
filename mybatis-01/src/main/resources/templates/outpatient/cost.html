@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>门诊收费</h1>
+<h1 th:text="${msg}" style="color:#ff0000;"></h1>
+<form th:action="@{/cost/search}">
+<label>
+    输入病历号进行检索
+    <input type="text" name="caseid" th:value="${caseid}">
+</label>
+<input type="submit">
+</form>
+<h2>病人资料</h2>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>门诊编号</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td th:text="${outpatientid}"></td>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家庭住址</th>
+            <th>联系电话</th>
+            <th>紧急联系人</th>
+            <th>关系</th>
+            <th>联系人电话</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pat:${patient}">
+            <td th:text="${pat.patientname}"></td>
+            <td th:text="${pat.age}"></td>
+            <td th:text="${pat.sex}"></td>
+            <td th:text="${pat.address}"></td>
+            <td th:text="${pat.phone}"></td>
+            <td th:text="${pat.firstman}"></td>
+            <td th:text="${pat.firstquery}"></td>
+            <td th:text="${pat.firstphone}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>看诊信息</h2>
+<table>
+    <thead>
+    <tr>
+        <th>医生姓名</th>
+        <th>科室</th>
+        <th>联系电话</th>
+        <th>挂号费用</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="doc:${doctor}">
+        <td th:text="${doc.docname}"></td>
+        <td th:text="${doc.title}"></td>
+        <td th:text="${doc.phone}"></td>
+        <td th:text="${doc.registrationfee}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>处方详细账单</h2>
+<table>
+    <thead>
+    <tr>
+        <th>药品id</th>
+        <th>药品数量</th>
+        <th>药品合计</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pre:${prescription}">
+        <td><input name="drugid" type="text" th:value="${pre.drugid}"/></td>
+        <td><input name="number" type="number" th:value="${pre.number}"></td>
+        <td th:text="${pre.total}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<form th:action="@{/cost/giveMoney}">
+<table>
+    <thead>
+    <tr>
+        <th>总计</th>
+        <th>缴费状态</th>
+        <th>流水号</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cst:${cost}">
+        <td><input name="total" type="text" th:value="${cst.total}"/></td>
+        <td><input name="state" type="text" th:value="${cst.state}"></td>
+        <td th:text="${cst.serialid}"></td>
+        <td><input type="submit" value="缴费" /></td>
+    </tr>
+    </tbody>
+
+</table>
+</form>
+
+
+</body>
+</html>

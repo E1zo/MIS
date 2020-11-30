@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yi.mapper.CostMapper">
+
+    <insert id="insertCost" parameterType="Cost">
+INSERT  into cost(outpatientid,patientid,drugcost,registrationcost,total,state)
+ values (outpatientid=#{outpatientid},patientid=#{patientid},drugcost=#{drugcost},registrationfee=#{registrationfee},total=#{total},state=#{state}) ;
+    </insert>
+
+    <update id="updateCost" parameterType="Cost">
+UPDATE  cost SET state=#{state}
+ WHERE outpatientid=#{outpatientid}
+    </update>
+
+    <update id="updateCostTotal" parameterType="Cost">
+UPDATE  cost SET total=#{total}
+ WHERE outpatientid=#{outpatientid}
+    </update>
+
+    <select id="queryCostByOutpatientid" resultType="Cost" parameterType="Integer">
+    SELECT * From cost WHERE outpatientid=#{outpatientid};
+    </select>
+
+</mapper>

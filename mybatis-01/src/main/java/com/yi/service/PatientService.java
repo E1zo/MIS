@@ -23,4 +23,5 @@ public interface PatientService {
     public Patient findPatientByCaseId(Integer caseid);
 
     public Patient findPatientById(Integer patientid);
+    public  int updatePatient(Patient patient);
 }

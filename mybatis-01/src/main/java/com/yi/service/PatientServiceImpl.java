@@ -55,4 +55,8 @@ public class PatientServiceImpl implements PatientService {
     public Patient findPatientById(Integer patientid) {
         return patientMapper.findPatientById(patientid);
     }
+
+    public  int updatePatient(Patient patient){
+        return patientMapper.updatePatient(patient);
+    }
 }

@@ -114,6 +114,7 @@ public class DrugController {
 
         return "/admin/allDrug";
     }
+
     @RequestMapping("/giveDrug")
     public String Doctor(@RequestParam(value = "drugid")Integer[] drugid, @RequestParam(value = "number")Integer[] number, Model model, HttpSession session) {
        //取到所有药品

@@ -30,6 +30,14 @@ public class Cost {
 
     private String state;
 
+    public Cost(Integer outpatientid, String state) {
+        this.outpatientid = outpatientid;
+        this.state = state;
+    }
+    public Cost(Integer outpatientid, Integer total) {
+        this.outpatientid = outpatientid;
+        this.total = total;
+    }
 
     public Integer getSerialid() {
         return serialid;

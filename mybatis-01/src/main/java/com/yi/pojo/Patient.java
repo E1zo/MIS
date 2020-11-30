@@ -19,6 +19,12 @@ public class Patient {
     private String sidno;
     private String sidtype;
     private String address;
+
+    public Patient(Integer patientid, double balance) {
+        this.patientid = patientid;
+        this.balance = balance;
+    }
+
     private String phone;
     private String companynameaddress;
     private String companyphone;

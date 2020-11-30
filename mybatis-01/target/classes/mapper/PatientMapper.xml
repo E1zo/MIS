@@ -19,4 +19,9 @@
        SELECT * FROM patient
 WHERE patientid=(SELECT patientid FROM casehistory WHERE caseid=#{caseid})
     </select>
+
+    <update id="updatePatient" parameterType="Patient">
+        UPDATE patient SET balance=#{balance}
+        WHERE patientid=#{patientid};
+    </update>
 </mapper>
