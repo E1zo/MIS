@@ -27,20 +27,20 @@ public class DepartmentController {
 
     //跳转到 添加部门 页面
     @RequestMapping("/toAddDepartment")
-    public String toAddDrug(){
+    public String toAddDepartment(){
         return "admin/addDepartment";
     }
 
     //添加部门
     @RequestMapping("/addDepartment")
-    public String addDrug(Department department){
+    public String addDepartment(Department department){
         departmentService.insertDpt(department);
         return "redirect:/admin/allDepartment";
     }
 
     //跳转到 修改部门信息 页面
     @RequestMapping("/toUpdateDepartment")
-    public String toUpdateDrug(int departmentid,Model model){
+    public String toUpdateDepartment(int departmentid,Model model){
         Department department = departmentService.queryDptById(departmentid);
         model.addAttribute("Qdpt",department);
         return "admin/updateDepartment";

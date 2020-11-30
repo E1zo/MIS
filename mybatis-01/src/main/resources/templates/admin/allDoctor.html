@@ -2,10 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>管理页面</title>
+    <title>医生管理</title>
     <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
@@ -36,9 +37,44 @@
     </div>
 </div>
 
-<a th:href="@{/admin/allDepartment}">部门管理</a>
-<a th:href="@{/admin/allDoctor}">医生管理</a>
-<a th:href="@{/admin/allDrug}">药品管理</a>
+<div>
+    <a th:href="@{/admin/toAddDoctor}">增加医生</a>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>医生ID</th>
+            <th>医生名称</th>
+            <th>性别</th>
+            <th>所属部门ID</th>
+            <th>联系电话</th>
+            <th>挂号费用</th>
+            <th>医生介绍</th>
+            <th>职称</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="doc:${docList}">
+            <td th:text="${doc.doctorid}"></td>
+            <td th:text="${doc.docname}"></td>
+            <td th:text="${doc.sex}"></td>
+            <td th:text="${doc.departmentid}"></td>
+            <td th:text="${doc.phone}"></td>
+            <td th:text="${doc.registrationfee}"></td>
+            <td th:text="${doc.description}"></td>
+            <td th:text="${doc.title}"></td>
+
+            <td>
+                <a th:href="@{/admin/toUpdateDoctor(doctorid=${doc.doctorid})}">修改</a>
+                <a th:href="@{/admin/deleteDoctor(doctorid=${doc.doctorid})}">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>

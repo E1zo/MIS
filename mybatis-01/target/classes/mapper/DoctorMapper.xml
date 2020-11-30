@@ -2,7 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yi.mapper.DoctorMapper">
 
+    <insert id="insertDoc" parameterType="Doctor">
+        insert into mis.doctor (docname,sex,departmentid,phone,registrationfee,description,title)
+        values (#{docname},#{sex},#{departmentid},#{phone},#{registrationfee},#{description},#{title});
+    </insert>
 
+    <delete id="deleteDocById" parameterType="int">
+        delete from mis.doctor where doctorid = #{doctorid};
+    </delete>
+
+    <update id="updateDoc" parameterType="Doctor">
+        update mis.doctor
+        set docname = #{docname},
+            sex = #{sex},
+            departmentid = #{departmentid},
+            phone = #{phone},
+            registrationfee = #{registrationfee},
+            description = #{description},
+            title = #{title}
+        where doctorid = #{doctorid};
+    </update>
 
     <select id="queryDocById" resultType="Doctor">
         select * from mis.doctor where doctorid = #{doctorid};

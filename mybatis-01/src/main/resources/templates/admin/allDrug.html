@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>药品管理</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <!--<script src="/statics/js/jquery-3.3.1.js"></script>
@@ -14,6 +15,37 @@
 
 <body>
 <h2 th:text="${msg}" style="color:#ff0000;"></h2>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="http://localhost:8080/">首页</a>
+                </li>
+                <li>
+                    <a th:href="@{/outpatient/outpatient}">门诊服务</a>
+                </li>
+                <li>
+                    <a th:href="@{/patient/registration}">病人登记</a>
+                </li>
+                <li>
+                    <a th:href="@{/doctor/doctor}">医生服务</a>
+                </li>
+                <li>
+                    <a th:href="@{/toDrugStorePage}">药房服务</a>
+                </li>
+                <li>
+                    <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                </li>
+                <li>
+                    <a th:href="@{/logout}">退出账号</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <div>
     <a th:href="@{/admin/toAddDrug}">增加药品</a>
 </div>

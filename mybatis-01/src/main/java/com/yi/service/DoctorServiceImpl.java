@@ -13,17 +13,17 @@ public class DoctorServiceImpl implements DoctorService {
     DoctorMapper doctorMapper;
     @Override
     public int insertDoc(Doctor doctor) {
-        return 0;
+        return doctorMapper.insertDoc(doctor);
     }
 
     @Override
     public int deleteDocById(int doctorid) {
-        return 0;
+        return doctorMapper.deleteDocById(doctorid);
     }
 
     @Override
     public int updateDoc(Doctor doctor) {
-        return 0;
+        return doctorMapper.updateDoc(doctor);
     }
 
     @Override

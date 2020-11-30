@@ -124,7 +124,46 @@ public class DoctorController {
         return "/doctor/doctor";
     }
 
+    //查看所有医生
+    @RequestMapping("/admin/allDoctor")
+    public String list(Model model){
+        List<Doctor> list = doctorService.queryAllDoc();
+        model.addAttribute("docList",list);
+        return "admin/allDoctor";
+    }
 
+    //跳转到 添加医生 页面
+    @RequestMapping("/admin/toAddDoctor")
+    public String toAddDoctor(){
+        return "admin/addDoctor";
+    }
 
+    //添加医生信息
+    @RequestMapping("/admin/addDoctor")
+    public String addDoctor(Doctor doctor){
+        doctorService.insertDoc(doctor);
+        return "redirect:/admin/allDoctor";
+    }
 
+    //跳转到 修改 页面
+    @RequestMapping("/admin/toUpdateDoctor")
+    public String toUpdateDoctor(int doctorid,Model model){
+        Doctor doctor = doctorService.queryDocById(doctorid);
+        model.addAttribute("Qdoc",doctor);
+        return "admin/updateDoctor";
+    }
+
+    //修改页面
+    @RequestMapping("/admin/updateDoctor")
+    public String updateDoctor(Doctor doctor){
+        doctorService.updateDoc(doctor);
+        return "redirect:/admin/allDoctor";
+    }
+
+    //删除医生
+    @RequestMapping("/admin/deleteDoctor")
+    public String deleteDoctor(int doctorid){
+        doctorService.deleteDocById(doctorid);
+        return "redirect:/admin/allDoctor";
+    }
 }

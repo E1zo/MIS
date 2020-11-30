@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加新的医生信息</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/admin/addDoctor}">
+        <div>
+            <label for="docName">医生名称</label>
+            <input type="text" name="docname" id="docName">
+        </div>
+        <div>
+            <label for="sex">性别</label>
+            <input type="text" name="sex" id="sex">
+        </div>
+        <div>
+            <label for="departmentid">所属部门ID</label>
+            <input type="text" name="departmentid" id="departmentid">
+        </div>
+        <div>
+            <label for="phone">联系电话</label>
+            <input type="text" name="phone" id="phone">
+        </div>
+        <div>
+            <label for="registrationfee">挂号费用</label>
+            <input type="text" name="registrationfee" id="registrationfee">
+        </div>
+        <div>
+            <label for="description">医生介绍</label>
+            <input type="text" name="description" id="description">
+        </div>
+        <div>
+            <label for="title">职称</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <input type="submit" value="添加医生">
+        </div>
+    </form>
+</div>
+</body>
+</html>
