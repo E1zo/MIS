@@ -5,20 +5,26 @@
     <title>添加新的部门信息</title>
 </head>
 <body>
-    <div>
-        <form th:action="@{/admin/addDepartment}">
-            <div>
-                <label for="dptName">部门名称</label>
-                <input type="text" name="dptname" id="dptName">
-            </div>
-            <div>
-                <label for="dptDescription">部门介绍</label>
-                <input type="text" name="description" id="dptDescription">
-            </div>
-            <div>
-                <input type="submit" value="添加部门">
-            </div>
-        </form>
+<div class="container">
+    <div class="row clearfix">
+
+        <div class="col-md-12 column">
+            <form th:action="@{/admin/addDepartment}">
+                <div class="form-group">
+                    <label for="dptName">部门名称</label>
+                    <input type="text" name="dptname" id="dptName">
+                </div>
+                <div class="form-group">
+                    <label for="dptDescription">部门介绍</label>
+                    <input type="text" name="description" id="dptDescription">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="添加部门">
+                </div>
+            </form>
+        </div>
+
     </div>
+</div>
 </body>
 </html>
