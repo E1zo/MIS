@@ -22,10 +22,8 @@
     <list default="true" id="ae57b5e5-cdaa-48a2-ae1d-cfe85710e1e0" name="Default Changelist" comment="first Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDepartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDepartment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDepartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDepartment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDoctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDoctor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDrug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/allDrug.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/templates/admin/allDrug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/templates/admin/allDrug.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDoctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDoctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDrug.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/resources/templates/admin/addDrug.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,15 +130,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -275,6 +271,7 @@
       <workItem from="1606717109623" duration="12286000" />
       <workItem from="1606731200805" duration="5254000" />
       <workItem from="1606891223558" duration="4344000" />
+      <workItem from="1607063024908" duration="1444000" />
     </task>
     <task id="LOCAL-00001" summary="first Version">
       <created>1606141971118</created>
@@ -358,42 +355,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1037" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606492026633" />
-    <state x="843" y="247" key="FileChooserDialogImpl" timestamp="1606891326195">
+    <state x="843" y="247" key="FileChooserDialogImpl" timestamp="1607063847643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="843" y="247" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606891326195" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1606916155485">
+    <state x="843" y="247" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607063847643" />
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1607064507543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507543" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1607064507542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1606916155485">
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507542" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1607064507543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606916155485" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607064507543" />
     <state width="1406" height="329" key="GridCell.Tab.2.bottom" timestamp="1606229282791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

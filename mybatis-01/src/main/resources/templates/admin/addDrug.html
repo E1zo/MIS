@@ -3,39 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>添加药品信息</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-<div>
-    <form th:action="@{/admin/addDrug}">
-        <div>
-            <label>药品名称</label>
-            <input type="text" name="drugname">
+<div class="container">
+    <div class="row clearfix">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="http://localhost:8080/">首页</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/outpatient/outpatient}">门诊服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/patient/registration}">病人登记</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/doctor/doctor}">医生服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/toDrugStorePage}">药房服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/logout}">退出账号</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div>
-            <label>药品拼音码</label>
-            <input type="text" name="pinyin">
+            <form th:action="@{/admin/addDrug}">
+                <div>
+                    <label>药品名称</label>
+                    <input type="text" name="drugname">
+                </div>
+                <div>
+                    <label>药品拼音码</label>
+                    <input type="text" name="pinyin">
+                </div>
+                <div>
+                    <label>药品单位</label>
+                    <input type="text" name="unit">
+                </div>
+                <div>
+                    <label>药品规格</label>
+                    <input type="text" name="specification">
+                </div>
+                <div>
+                    <label>药品价格</label>
+                    <input type="text" name="price">
+                </div>
+                <div>
+                    <label>药品数量</label>
+                    <input type="text" name="quantity">
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="添加药品">
+                </div>
+            </form>
         </div>
-        <div>
-            <label>药品单位</label>
-            <input type="text" name="unit">
-        </div>
-        <div>
-            <label>药品规格</label>
-            <input type="text" name="specification">
-        </div>
-        <div>
-            <label>药品价格</label>
-            <input type="text" name="price">
-        </div>
-        <div>
-            <label>药品数量</label>
-            <input type="text" name="quantity">
-        </div>
-        <div>
-            <input type="submit" value="添加药品">
-        </div>
-    </form>
+    </div>
 </div>
 
 </body>

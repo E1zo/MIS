@@ -3,42 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>添加新的医生信息</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div>
-    <form th:action="@{/admin/addDoctor}">
-        <div>
-            <label for="docName">医生名称</label>
-            <input type="text" name="docname" id="docName">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="http://localhost:8080/">首页</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/outpatient/outpatient}">门诊服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/patient/registration}">病人登记</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/doctor/doctor}">医生服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/toDrugStorePage}">药房服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/logout}">退出账号</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <form th:action="@{/admin/addDoctor}">
+                <div>
+                    <label for="docName">医生名称</label>
+                    <input type="text" name="docname" id="docName">
+                </div>
+                <div>
+                    <label for="sex">性别</label>
+                    <input type="text" name="sex" id="sex">
+                </div>
+                <div>
+                    <label for="departmentid">所属部门ID</label>
+                    <input type="text" name="departmentid" id="departmentid">
+                </div>
+                <div>
+                    <label for="phone">联系电话</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+                <div>
+                    <label for="registrationfee">挂号费用</label>
+                    <input type="text" name="registrationfee" id="registrationfee">
+                </div>
+                <div>
+                    <label for="description">医生介绍</label>
+                    <input type="text" name="description" id="description">
+                </div>
+                <div>
+                    <label for="title">职称</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="添加医生">
+                </div>
+            </form>
         </div>
-        <div>
-            <label for="sex">性别</label>
-            <input type="text" name="sex" id="sex">
-        </div>
-        <div>
-            <label for="departmentid">所属部门ID</label>
-            <input type="text" name="departmentid" id="departmentid">
-        </div>
-        <div>
-            <label for="phone">联系电话</label>
-            <input type="text" name="phone" id="phone">
-        </div>
-        <div>
-            <label for="registrationfee">挂号费用</label>
-            <input type="text" name="registrationfee" id="registrationfee">
-        </div>
-        <div>
-            <label for="description">医生介绍</label>
-            <input type="text" name="description" id="description">
-        </div>
-        <div>
-            <label for="title">职称</label>
-            <input type="text" name="title" id="title">
-        </div>
-        <div>
-            <input type="submit" value="添加医生">
-        </div>
-    </form>
+    </div>
 </div>
 </body>
 </html>
