@@ -2,17 +2,37 @@
 <html lang="en" xmlns:th="http://www.thymeleaf,org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登录</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        input {
+            height: 40px;
+            width: 1170px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
 <body>
-<h1>登录</h1>
-<hr>
-<p th:text="${msg}" style="color:#ff0000;"></p>
-<form th:action="@{/login}">
-    <p>用户名：<input type="text" name="username"></p>
-    <p>密码：<input type="text" name="password"></p>
-    <p><input type="submit"></p>
-
-</form>
+<div class="container">
+    <div class="row clearfix">
+        <h1>登录</h1>
+        <hr>
+        <p th:text="${msg}" style="color:#ff0000;"></p>
+        <form th:action="@{/login}">
+            <p>账号：</p>
+                <input type="text" name="username">
+            <p>密码：</p>
+                <input type="text" name="password">
+            <p></p>
+            <input class="btn btn-large btn-success" type="submit">
+        </form>
+    </div>
+</div>
 </body>
 </html>

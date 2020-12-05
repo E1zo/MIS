@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <title>添加新的部门信息</title>
     <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        input{
+            height: 40px;
+            width: 1170px;
+        }
+
+    </style>
 </head>
 <body>
-
 <div class="container">
     <div class="row clearfix">
+        <h1>添加部门信息</h1>
         <div class="col-md-12 column">
-
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span12">
@@ -34,14 +41,14 @@
                                 <a th:href="@{/admin/toAdminPage}">医院管理</a>
                             </li>
                             <li>
-                                <a th:href="@{/logout}">退出账号</a>
+                                <a th:href="@{/logout}" style="color: red">退出账号</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <form th:action="@{/admin/addDepartment}">
+            <form class="form-horizontal" th:action="@{/admin/addDepartment}">
                 <div class="form-group">
                     <label for="dptName">部门名称：</label>
                     <input type="text" name="dptname" id="dptName">
@@ -51,7 +58,7 @@
                     <input type="text" name="description" id="dptDescription">
                 </div>
                 <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="添加部门">
+                    <input class="btn btn-large btn-success" type="submit" value="添加部门">
                 </div>
             </form>
         </div>

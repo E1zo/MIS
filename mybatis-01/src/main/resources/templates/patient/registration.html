@@ -4,76 +4,120 @@
     <meta charset="UTF-8">
     <title>病人登记</title>
     <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        input {
+            height: 40px;
+            width: 1170px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
 </head>
 <body>
-<h1>病人登记</h1>
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="http://localhost:8080/">首页</a>
-                </li>
-                <li>
-                    <a th:href="@{/outpatient/outpatient}">门诊服务</a>
-                </li>
-                <li>
-                    <a th:href="@{/patient/registration}">病人登记</a>
-                </li>
-                <li>
-                    <a th:href="@{/doctor/doctor}">医生服务</a>
-                </li>
-                <li>
-                    <a th:href="@{/toDrugStorePage}">药房服务</a>
-                </li>
-                <li>
-                    <a th:href="@{/admin/toAdminPage}">医院管理</a>
-                </li>
-                <li>
-                    <a th:href="@{/logout}">退出账号</a>
-                </li>
-            </ul>
+<div class="container">
+    <div class="row clearfix">
+        <h1>病人登记</h1>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="http://localhost:8080/">首页</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/outpatient/outpatient}">门诊服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/patient/registration}">病人登记</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/doctor/doctor}">医生服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/toDrugStorePage}">药房服务</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/logout}" style="color: red">退出账号</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+        <form th:action="@{/registration}">
+            <div class="form-group">
+                <p>姓名：</p><input type="text" name="name"/>
+            </div>
+            <div class="form-group">
+                <p>性别：</p><input type="text" name="sex"/>
+            </div>
+            <div class="form-group">
+                <p>年龄：</p><input type="text" name="age"/>
+            </div>
+            <div class="form-group">
+                <p>证件号码：</p><input type="text" name="sidno"/>
+            </div>
+            <div class="form-group">
+                <p>证件类型：</p><input type="text" name="sidtype"/>
+            </div>
+            <div class="form-group">
+                <p>家庭住址：</p><input type="text" name="address"/>
+            </div>
+            <div class="form-group">
+                <p>联系电话：</p><input type="text" name="phone"/>
+            </div>
+            <div class="form-group">
+                <p>公司名称及地址：</p><input type="text" name="companynameaddress"/>
+            </div>
+            <div class="form-group">
+                <p>公司联系电话：</p><input type="text" name="companyphone"/>
+            </div>
+            <div class="form-group">
+                <p>Email：</p><input type="text" name="email"/>
+            </div>
+            <div class="form-group">
+                <p>紧急联系人：</p><input type="text" name="firstman"/>
+            </div>
+            <div class="form-group">
+                <p>与病人关系：</p><input type="text" name="firstquery"/>
+            </div>
+            <div class="form-group">
+                <p>紧急联系人电话：</p><input type="text" name="firstphone"/>
+            </div>
+            <div class="form-group">
+                <p>联系地址：</p><input type="text" name="firstaddress"/>
+            </div>
+            <div class="form-group">
+                <p>登记日期：</p><input type="text" name="recorddate"/>
+            </div>
+            <div class="form-group">
+                <p>过敏史：</p><input type="text" name="hispass"/>
+            </div>
+            <div class="form-group">
+                <p>手术史：</p><input type="text" name="hisoperate"/>
+            </div>
+            <div class="form-group">
+                <p>卡类型：</p><input type="text" name="cardtype"/>
+            </div>
+            <div class="form-group">
+                <p>余额：</p><input type="text" name="balance"/>
+            </div>
+            <div class="form-group">
+                <p>透支额：</p><input type="text" name="creditlimit"/>
+            </div>
+            <div class="form-group">
+                <p></p><input class="btn btn-large btn-success" type="submit">
+            </div>
+        </form>
     </div>
 </div>
-<form th:action="@{/registration}">
-
-    <p>姓名：<input type="text" name="name"></p>
-    <p>性别：<input type="text" name="sex"></p>
-    <p>年龄：<input type="text" name="age"></p>
-    <p>证件号码：<input type="text" name="sidno"></p>
-    <p>证件类型：<input type="text" name="sidtype"></p>
-    <p>家庭住址：<input type="text" name="address"></p>
-    <p>联系电话：<input type="text" name="phone"></p>
-    <p>公司名称及地址：<input type="text" name="companynameaddress"></p>
-    <p>公司联系电话：<input type="text" name="companyphone"></p>
-    <p>Email：<input type="text" name="email"></p>
-    <p>紧急联系人：<input type="text" name="firstman"></p>
-    <p>与病人关系：<input type="text" name="firstquery"></p>
-    <p>紧急联系人电话：<input type="text" name="firstphone"></p>
-    <p>联系地址：<input type="text" name="firstaddress"></p>
-    <p>登记日期：<input type="text" name="recorddate"></p>
-    <p>过敏史：<input type="text" name="hispass"></p>
-    <p>手术史：<input type="text" name="hisoperate"></p>
-    <p>卡类型：<input type="text" name="cardtype"></p>
-    <p>余额：<input type="text" name="balance"></p>
-    <p>透支额：<input type="text" name="creditlimit"></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <p><input type="submit"></p>
-
-</form>
 </body>
 </html>

@@ -10,6 +10,7 @@
 
 <div class="container">
     <div class="row clearfix">
+        <h1>部门管理</h1>
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span12">
@@ -30,19 +31,20 @@
                             <a th:href="@{/toDrugStorePage}">药房服务</a>
                         </li>
                         <li>
-                            <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                            <a th:href="@{/admin/allDepartment}">部门管理</a>
                         </li>
                         <li>
-                            <a th:href="@{/logout}">退出账号</a>
+                            <a th:href="@{/admin/allDoctor}">医生管理</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/admin/allDrug}">药品管理</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/logout}" style="color: red">退出账号</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-
-        <div class="col-md-12 column">
-            <a class="btn btn-primary" th:href="@{/admin/toAddDepartment}">增加部门</a>
         </div>
 
         <div class="row clearfix">
@@ -62,13 +64,16 @@
                         <td th:text="${dpt.dptname}"></td>
                         <td th:text="${dpt.description}"></td>
                         <td>
-                            <a th:href="@{/admin/toUpdateDepartment(departmentid=${dpt.departmentid})}">修改</a>
-                            <a th:href="@{/admin/deleteDepartment(departmentid=${dpt.departmentid})}">删除</a>
+                            <a th:href="@{/admin/toUpdateDepartment(departmentid=${dpt.departmentid})}" style="color: green">修改</a>
+                            <a th:href="@{/admin/deleteDepartment(departmentid=${dpt.departmentid})}" style="color: red">删除</a>
                         </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+        <div class="col-md-12 column">
+            <a class="btn btn-large btn-warning" th:href="@{/admin/toAddDepartment}">增加部门</a>
         </div>
     </div>
 </div>

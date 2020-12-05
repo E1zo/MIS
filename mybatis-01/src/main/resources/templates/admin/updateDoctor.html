@@ -3,44 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>更新医生信息</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        input{
+            height: 40px;
+            width: 1170px;
+        }
+    </style>
 </head>
 <body>
-<form th:action="@{/admin/updateDoctor}">
-    <div>
-        <input type="hidden" name="doctorid" th:value="${Qdoc.doctorid}">
-    </div>
-    <div>
-        <label>医生名称</label>
-        <input type="text" name="docname" th:value="${Qdoc.docname}">
-    </div>
-    <div>
-        <label>性别</label>
-        <input type="text" name="sex" th:value="${Qdoc.sex}">
-    </div>
-    <div>
-        <label>所属部门ID</label>
-        <input type="text" name="departmentid" th:value="${Qdoc.departmentid}">
-    </div>
-    <div>
-        <label>联系电话</label>
-        <input type="text" name="phone" th:value="${Qdoc.phone}">
-    </div>
-    <div>
-        <label>挂号费用</label>
-        <input type="text" name="registrationfee" th:value="${Qdoc.registrationfee}">
-    </div>
-    <div>
-        <label>医生介绍</label>
-        <input type="text" name="description" th:value="${Qdoc.description}">
-    </div>
-    <div>
-        <label>职称</label>
-        <input type="text" name="title" th:value="${Qdoc.title}">
-    </div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="http://localhost:8080/">首页</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/outpatient/outpatient}">门诊服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/patient/registration}">病人登记</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/doctor/doctor}">医生服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/toDrugStorePage}">药房服务</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/admin/toAdminPage}">医院管理</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/logout}">退出账号</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form th:action="@{/admin/updateDoctor}">
+                <div class="form-group">
+                    <input type="hidden" name="doctorid" th:value="${Qdoc.doctorid}">
+                </div>
+                <div class="form-group">
+                    <label>医生名称</label>
+                    <input type="text" name="docname" th:value="${Qdoc.docname}">
+                </div>
+                <div class="form-group">
+                    <label>医生性别</label>
+                    <input type="text" name="sex" th:value="${Qdoc.sex}">
+                </div>
+                <div class="form-group">
+                    <label>部门&nbsp;I&nbsp;D&nbsp;&nbsp;</label>
+                    <input type="text" name="departmentid" th:value="${Qdoc.departmentid}">
+                </div>
+                <div class="form-group">
+                    <label>联系电话</label>
+                    <input type="text" name="phone" th:value="${Qdoc.phone}">
+                </div>
+                <div class="form-group">
+                    <label>挂号费用</label>
+                    <input type="text" name="registrationfee" th:value="${Qdoc.registrationfee}">
+                </div>
+                <div class="form-group">
+                    <label>医生介绍</label>
+                    <input type="text" name="description" th:value="${Qdoc.description}">
+                </div>
+                <div class="form-group">
+                    <label>医生职称</label>
+                    <input type="text" name="title" th:value="${Qdoc.title}">
+                </div>
 
-    <div>
-        <input type="submit" value="修改医生">
+                <div>
+                    <input class="btn btn-large btn-success" type="submit" value="修改医生">
+                </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
 </body>
 </html>
